@@ -12,15 +12,15 @@ export default function Home({generated}) {
         <h1 className="title">
           ● (On-demand ISR) Server Side Generated page
         </h1>
-        <p>Visit <a href="/api/revalidate">/api/revalidate</a> to revalidate, last revalidate: {generated}</p>
+        <p>Visit <a href="/api/revalidate?page=/sample-odisr">/api/revalidate?page=/sample-odisr</a> to revalidate, last revalidate: {generated}</p>
       </main>
     </div>
   )
 }
 
 export async function getStaticProps() {
-  let time = new Date();
-  const generated = time.toTimeString()
+  let date = new Date();
+  const generated = date.toString()
 
   return {
     props: {
