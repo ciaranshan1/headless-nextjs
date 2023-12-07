@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "ls -la && cat atlas/atlas-cache-handler.js && next build && cat .next/prerender-manifest.json",
+    "build": "next build && cat .next/prerender-manifest.json",
     "vercel": "mkdir -p .vercel && echo \"{ \\\"projectId\\\": \\\"_\\\", \\\"orgId\\\": \\\"_\\\", \\\"settings\\\": {} }\" > .vercel/project.json && vercel build",
     "start": "next start -p ${PORT:-8080}",
     "lint": "next lint",
-    "wpe-build": "next build"
+    "wpe-build": "ls -la && cat atlas/atlas-cache-handler.js && next build"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.445.0",
